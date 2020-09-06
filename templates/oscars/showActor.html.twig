@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block title actor.name  %}
+	{% block stylesheets %}
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+		<link rel="stylesheet" href="{{ asset('style.css') }}">
+
+	{% endblock %}
+
+	{% block body %}
+		
+		<a href="{{ path('app_actors') }}" class="btn btn-light pt-2">&#9794; Retour</a>
+		
+		<div class="col-md-6 mx-auto">
+			<article class="effet mt-5 bg-white rounded shadow">
+				<div class="mw-100 rounded overflow-hidden">
+					<img src="{{ actor.image }}" class="w-100"/>
+				</div>
+				<h2 class="h5 pl-3 pt-3 text-secondary">{{ actor.name }}</h2>
+
+				<p class="pl-3 pr-3 pb-3 text-break">{{ actor.description }}</p>
+
+			</article>
+
+		</div>
+
+	{% endblock %}
+	

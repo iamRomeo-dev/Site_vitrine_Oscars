@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500;600&display=swap');
+
+body {
+	font-family: 'Josefin Sans', sans-serif;
+}
+
+/*Style index.html.twig*/
+/*Responsive grosse image*/
+.img-responsive {
+	max-width: 100%;
+	-ms-interpolation-mode: bicubic;
+	image-rendering: optimizeQuality;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+/*Changement grosse image*/
+.img-responsive:hover { content : url(https://i0.wp.com/www.blow-ent.com/wp-content/uploads/2019/02/Oscars-2019.png?w=986&ssl=1);
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/*Block des trois petites images*/
+.row {
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	padding: 0 4px;
+}
+
+/*Alignement par 3 colonnes*/
+.column {
+	-ms-flex: 33%;
+	flex: 33%;
+	max-width: 25%;
+	padding: 0 4px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.column img {
+	margin-top: 8px;
+	vertical-align: middle;
+	width: 100%;
+}
+
+/*Effet hover des trois petites images*/
+.column img {
+	-webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+/*Effet hover des trois petites images*/
+.column:hover img {
+	-webkit-transform: scale(1.3);
+	transform: scale(1.3);
+}
+
+/*Effet sur les 3 petites images apparition du text*/
+.column{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+/*Positionne le bouton au centre*/
+.column button{
+	position: absolute;
+	transform: translatey(60px);
+	-webkit-appearance: none;
+	border: none;
+	background: none;
+	color:white;
+	width: 250px;
+	height:50px;
+	font-size: 20px;
+	padding: 0;
+	margin: 0;
+	outline: none;
+	z-index: 10;
+}
+
+/*Complète la bordure en haut*/
+.column button > span:after{
+	content:'';
+	position: absolute;
+	top:0;
+	left: 50%;
+	width: 20px;
+	height: 0;
+
+	border: 1px solid white;
+	border-left: none;
+	border-bottom: none;
+
+	transition: height 0.15s ease-out, width 0.15s ease-out 0.15s;
+}
+
+/*Complète la bordure en haut*/
+.column:hover button > span:after{
+	width: calc(50% - 1px);
+	height: calc(100% - 2px);
+	transition: width 0.15s ease-out, height 0.15s ease-out 0.15s;
+}
+
+/*Complète la bordure en haut*/
+.column button > span:before{
+	content:'';
+	position: absolute;
+	top:0;
+	right: 50%;
+	width: 20px;
+	height: 0;
+
+	border: 1px solid white;
+	border-right: none;
+	border-bottom: none;
+
+	transition: height 0.15s ease-out, width 0.15s ease-out 0.15s;
+}
+
+/*Complète la bordure en haut*/
+.column:hover button > span:before{
+	width: calc(50% - 1px);
+	height: calc(100% - 2px);
+	transition: width 0.15s ease-out, height 0.15s ease-out 0.15s;
+}
+
+/*Complète la bordure à droite*/
+.column button > span > span:before{
+	content:'';
+	position: absolute;
+	bottom:0;
+	right: 0%;
+	width: 1px;
+	height: 1px;
+	opacity: 0;
+
+}
+
+/*Complète la bordure à droite*/
+.column:hover button > span > span:before{
+	opacity: 1;
+	border-bottom: 1px solid white;
+	width: calc(50%);
+	height: 1px;
+	transition: opacity 0s ease-out 0.29s, width 0.15s ease-out 0.3s;
+}
+
+/*Complète la bordure à gauche*/
+.column button > span > span:after{
+	content:'';
+	position: absolute;
+	bottom:0;
+	left: 0%;
+	width: 1px;
+	height: 1px;
+	opacity: 0;
+
+}
+
+/*Complète la bordure à gauche*/
+.column:hover button > span > span:after{
+	opacity: 1;
+	border-bottom: 1px solid white;
+	width: calc(50%);
+	height: 1px;
+	transition: opacity 0s ease-out 0.29s, width 0.15s ease-out 0.3s;
+}
+
+/*Effet apparition de l'ecriture*/
+.column button > span > span > span{
+	transition: color 0.15s ease-out 0.3s;
+	color: transparent;
+}
+
+/*Couleur de l'ecriture apres survol de la souris*/
+.column:hover button > span > span > span{
+	color:white;
+}
+
+.countdownContainer{
+	margin: 0 auto;
+	width: 100px;
+	text-align: center;
+	background-color: #ddd;
+	border: 1px solid #999;
+	padding: 10px;
+	box-shadow: 0 0 5px 3px #ccc;
+}
+/*EO Style index.html.twig*/
+
+
+/*Style actors.html.twig et actress*/
+/*Effet hover des images*/
+.effet img {
+	transition: transform 0.3s ease-out;
+}
+
+/*Effet hover des images*/
+.effet img:hover {
+	transform: scale(1.075);
+}
+
+/*Taille des images acteurs actrices*/
+.effet a img {
+	height:200px;
+}
+
+/*Responsive des actors et actress*/
+@media screen and (max-width: 992px) {
+	.effet a img {
+		height:100px;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.effet a img {
+		height:300px;
+	}
+}
+/*EO Style actors.html.twig et actress*/
+
+
+/*Style index.html.twig*/
+/*Responsive des trois images*/
+@media screen and (max-width: 1000px) {
+	.column {
+		-ms-flex: 50%;
+		flex: 50%;
+		max-width: 50%;
+	}
+}
+@media screen and (max-width: 800px) {
+	.column {
+		-ms-flex: 50%;
+		flex: 50%;
+		max-width: 50%;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.column {
+		-ms-flex: 100%;
+		flex: 100%;
+		max-width: 100%;
+	}
+}
+
+
+
+
+
+
+
+

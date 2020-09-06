@@ -1,0 +1,31 @@
+ {% extends 'base.html.twig' %}
+
+ {% block title %}Best Actress{% endblock %}
+
+ 	{% block body %}
+ 		<link rel="stylesheet" href="{{ asset('style.css') }}">
+ 		
+ 		<a href="{{ path('app_home') }}" class="btn btn-light pt-2">&#9754; Retour</a>
+ 		
+ 		<div class="text-center mt-5 mb-5">
+ 			<h1>Category Best Actress</h1>
+ 		</div>
+
+ 		{% for row in actress | batch(3) %}
+ 			<div class="row">
+ 				{% for actress in row %}
+ 					<div class="col-md-4">
+ 						<article class="effet bg-white rounded shadow">
+ 							<div class="mw-100 mb-5 rounded overflow-hidden">
+ 								<a href="{{ path('app_actress_show', {id: actress.id}) }}">
+ 									<img src="{{ actress.image }}" class="w-100"/>
+ 									<p class="pl-3 pb-1 mt-3 text-muted text-center"><small>{{ actress.name }}</small></p>
+ 								</div>
+ 							</article>
+ 						</div>
+ 					{% endfor %}
+ 				</div>
+
+ 			{% endfor %}
+
+ 		{% endblock %}

@@ -1,0 +1,46 @@
+ {% extends 'base.html.twig' %}
+
+ {% block title %}Home{% endblock %}
+
+ 	{% block body %}
+
+ 		<link rel="stylesheet" href="{{ asset('style.css') }}">
+ 		
+ 		<table class="countdownContainer">
+ 			<tr class="info">
+ 				<td colspan="4">Oscars 2021</td>
+ 			</tr>
+ 			<tr class="info">
+ 				<td id="days"></td>
+ 				<td id="hours"></td>
+ 				<td id="minutes"></td>
+ 				<td id="seconds"></td>
+ 			</tr>
+ 		</table>
+
+
+ 		<figure class="img-responsive shadow-sm p-3 mb-5 mt-5 bg-white rounded">
+ 			<img class="img-responsive" src="https://medias.unifrance.org/medias/13/59/211725/format_page/media.jpg" alt="Photo en RWD">
+ 		</figure>
+
+
+ 		{% for grid in oscars | batch(3) %}
+ 			<div class="row mt-5 mb-5"> 
+ 				{% for oscar in grid %}
+ 					<div class="column">
+ 						<img src="{{ oscar.image }}" class="w-100 rounded">
+ 						<button>
+ 							<span>
+ 								<span>
+ 									<span>
+ 										Oscars 2019
+ 									</span>
+ 								</span>
+ 							</span>
+ 						</button>
+ 					</div>
+ 				{% endfor %}
+ 			</div>
+ 		{% endfor %}	
+
+ 	{% endblock %}

@@ -1,0 +1,15 @@
+Pour lancer, suivre les instructions:
+-------------------------------------
+
+Ouvrir le dossier Symfony avec votre commande préféré commande (Powershell ou Node)
+	Lancer le server:	
+		>symfony serve -d 
+	
+	Créer la base de données (si besoin, changer son nom #.env ligne 32):
+		>symfony console doctrine:database:create
+
+
+Dans phpMyAdmin (Impoter la base de données):
+==> Importer 
+==> Parcourir (sélectionner le fichier .sql) 
+==> Executer
