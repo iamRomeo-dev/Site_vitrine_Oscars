@@ -1,7 +1,8 @@
 Pour lancer, suivre les instructions:
 -------------------------------------
-
 Ouvrir le dossier Symfony avec votre commande préféré commande (Powershell ou Node)
+	Pour installer les dépendances:
+		>composer update
 	Lancer le server:	
 		>symfony serve -d 
 	
