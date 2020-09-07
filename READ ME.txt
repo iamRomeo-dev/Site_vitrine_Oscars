@@ -10,7 +10,7 @@ Ouvrir le dossier Symfony avec votre commande préféré commande (Powershell ou
 		>symfony console doctrine:database:create
 
 
-Dans phpMyAdmin (Impoter la base de données):
+Dans phpMyAdmin (Impoter la base de données /nouveauTest.sql):
 ==> Importer 
 ==> Parcourir (sélectionner le fichier .sql) 
 ==> Executer
